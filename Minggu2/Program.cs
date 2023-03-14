@@ -4,16 +4,24 @@ namespace Bubble_Sort
 {
     class Program
     {
-        // Deklarasi array int dengan ukuran 20
+        /// <summary>
+        /// Deklarasi array int dengan ukuran 20
+        /// </summary>
         private int[] a = new int[20];
 
-        // Deklarasi variabel int untuk menyimpan banyaknya data pada array
+        /// <summary>
+        /// Deklarasi variabel int untuk menyimpan banyaknya data pada array
+        /// </summary>
         private int n;
 
-        // Fungsi / Method untuk menerima masukan
+        /// <summary>
+        /// Fungsi / Method untuk menerima masukan
+        /// </summary>
         public void read()
         {
-            // Menerima angka untuk menentukan banyaknya data yang disimpan pada array
+            /// <summary>
+            /// Menerima angka untuk menentukan banyaknya data yang disimpan pada array
+            /// </summary>
             while (true)
             {
                 Console.Write("Masukkan banyaknya elemen pada Array: ");
@@ -29,7 +37,9 @@ namespace Bubble_Sort
             Console.WriteLine(" Masukkan elemen array ");
             Console.WriteLine("------------------------");
 
-            // Pengguna memasukkan elemen pada array
+            /// <summary>
+            /// Pengguna memasukkan elemen pada array
+            /// </summary>
             for (int i = 0; i < n; i++)
             {
                 Console.Write("<" + (i + 1) + ">");
@@ -39,7 +49,9 @@ namespace Bubble_Sort
         }
         public void display()
         {
-            // Menampilkan array yang tersusun
+            /// <summary>
+            /// Menampilkan array yang tersusun
+            /// </summary>
             Console.WriteLine("");
             Console.WriteLine("-----------------------------------");
             Console.WriteLine(" Element array yang telah tersusun ");
@@ -53,14 +65,24 @@ namespace Bubble_Sort
 
         public void BubbleSortArray()
         {
-            for (int i = 1; i < n; i++) // for n - 1 passes
+            /// <summary>
+            /// Untuk n - 1 pass
+            /// </summary>
+            for (int i = 1; i < n; i++)
             {
-                // Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                /// <summary>
+                /// Pada pass i, bandingkan n - i elemen pertama dengan elemen selanjutnya
+                /// </summary>
                 for (int j = 0; j < n; j++)
                 {
-                    if (a[j] > a[j + 1]) // Jika elemen tidak dalam urutan yang benar
+                    /// <summary>
+                    /// Jika elemen tidak dalam urutan yang benar
+                    /// </summary>
+                    if (a[j] > a[j + 1])
                     {
-                        // Tukar elemen
+                        /// <summary>
+                        /// Tukar elemen
+                        /// </summary>
                         int temp;
                         temp = a[j];
                         a[j] = a[j + 1];
@@ -72,15 +94,25 @@ namespace Bubble_Sort
 
         static void Main(string[] args)
         {
-            // Creating the object of the BubbleSort class
+            /// <summary>
+            /// Membuat objek dari kelas BubbleSort
+            /// </summary>
             Program myList = new Program();
-            // Pemanggilan fungsi untuk menerima elemen array
+            /// <summary>
+            /// Pemanggilan fungsi untuk menerima elemen array
+            /// </summary>
             myList.read();
-            // Pemanggilan fungsi untuk mengurutkan array
+            /// <summary>
+            /// Pemanggilan fungsi untuk mengurutkan array
+            /// </summary>
             myList.BubbleSortArray();
-            // Pemanggilan fungsi untuk menampilkan array yang tersusun
+            /// <summary>
+            /// Pemanggilan fungsi untuk menampilkan array yang tersusun
+            /// </summary>
             myList.display();
-            // Exit
+            /// <summary>
+            /// Exit
+            /// </summary>
             Console.WriteLine("\n\nTekan Tombol Apa Saja Untuk Keluar.");
             Console.Read();
         }
